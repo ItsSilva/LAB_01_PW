@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import LatestUpdates from './components/LatestUpdates/LatestUpdates';
 import OurProducts from './components/OurProducts/OurProducts';
 import More from './components/More/More';
+import Footer from './components/Footer/Footer';
 import { useState } from 'react'
 
 function App() {
