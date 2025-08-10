@@ -16,9 +16,11 @@ function App() {
       <nav className='custom-navbar'>
         <Navbar activeTab={activeTab} onTabClick={handleTabClick} />
       </nav>
-      <section className='Header'>
-        <Header/>
-      </section>
+      <main>
+        <section className='Header'>
+          <Header />
+        </section>
+      </main>
     </>
   )
 }
