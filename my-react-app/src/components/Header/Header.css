@@ -1,7 +1,7 @@
 .custom-header {
   position: relative;
   width: 100%;
-  height: calc(100vh - 58px); /* Resta la altura del navbar */
+  height: calc(100vh - 58px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  transition: opacity 0.6s ease-in-out;
 }
 
 .header-content {
@@ -27,6 +28,18 @@
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  animation: fadeInContent 0.8s ease-in-out;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .game-info {
@@ -41,6 +54,7 @@
   height: 60px;
   border-radius: 12px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .game-title {
@@ -48,6 +62,7 @@
   font-weight: 700;
   color: #ffffff;
   opacity: 0.9;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .main-title {
@@ -57,7 +72,8 @@
   line-height: 1.1;
   margin-bottom: 2rem;
   max-width: 800px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  white-space: pre-line;
 }
 
 .cta-section {
@@ -77,23 +93,28 @@
 }
 
 .thumbnail {
+  width: 120px;
   height: 80px;
   border-radius: 8px;
   object-fit: cover;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   border: 2px solid transparent;
+  opacity: 0.7;
 }
 
 .thumbnail:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 16px rgba(123, 177, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(123, 177, 255, 0.4);
   border-color: #7bb1ff;
+  opacity: 1;
 }
 
 .thumbnail.active {
   border-color: #7bb1ff;
-  box-shadow: 0 2px 12px rgba(123, 177, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(123, 177, 255, 0.6);
+  opacity: 1;
+  transform: scale(1.02);
 }
 
 /* Responsive design */
@@ -106,6 +127,10 @@
     font-size: 2.5rem;
   }
   
+  .game-title {
+    font-size: 2rem;
+  }
+  
   .bottom-thumbnails {
     bottom: 1rem;
     right: 1rem;
@@ -115,5 +140,33 @@
   .thumbnail {
     width: 80px;
     height: 60px;
+  }
+  
+  .slide-indicators {
+    bottom: 0.5rem;
+  }
+  
+  .header-content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .game-title {
+    font-size: 1.5rem;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .game-logo {
+    width: 45px;
+    height: 45px;
   }
 }
