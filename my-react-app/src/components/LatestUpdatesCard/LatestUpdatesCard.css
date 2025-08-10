@@ -4,110 +4,149 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  height: 300px;
+  height: 400px;
+  background: #000;
 }
 
 .latest-update-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-  border-color: rgba(123, 177, 255, 0.3);
 }
 
 .card-image {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .latest-update-card:hover .card-image {
   transform: scale(1.05);
 }
 
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 100%
+  );
+  z-index: 2;
+}
+
 .card-content {
-  padding: 1rem;
-  position: relative;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 3;
+  color: #ffffff;
 }
 
 .card-badge {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(123, 177, 255, 0.9);
-  color: #ffffff;
-  padding: 4px 12px;
+  padding: 6px 14px;
   border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 3;
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .card-badge.product {
   background: rgba(64, 224, 208, 0.9);
+  color: #ffffff;
 }
 
 .card-badge.company {
   background: rgba(255, 140, 0, 0.9);
+  color: #ffffff;
 }
 
 .game-name {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
 }
 
 .content-text {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   color: #ffffff;
-  line-height: 1.4;
+  line-height: 1.3;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos específicos para diferentes tipos de tarjetas */
 .latest-update-card.large {
   grid-column: span 2;
-  height: 350px;
-}
-
-.latest-update-card.large .card-image {
-  height: 250px;
+  height: 400px;
 }
 
 .latest-update-card.large .card-content {
-  height: 100px;
+  padding: 2rem;
+}
+
+.latest-update-card.large .game-name {
+  font-size: 14px;
+  margin-bottom: 0.75rem;
 }
 
 .latest-update-card.large .content-text {
-  font-size: 14px;
-  -webkit-line-clamp: 3;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-line-clamp: 4;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .latest-update-card {
+    height: 300px;
+  }
+  
   .latest-update-card.large {
     grid-column: span 1;
     height: 300px;
   }
   
-  .latest-update-card.large .card-image {
-    height: 200px;
+  .latest-update-card .card-overlay {
+    height: 50%;
+  }
+  
+  .latest-update-card.large .card-content {
+    padding: 1.5rem;
+  }
+  
+  .latest-update-card.large .game-name {
+    font-size: 13px;
+    margin-bottom: 0.5rem;
   }
   
   .latest-update-card.large .content-text {
-    font-size: 14px;
-    -webkit-line-clamp: 2;
+    font-size: 15px;
+    -webkit-line-clamp: 3;
   }
 }
