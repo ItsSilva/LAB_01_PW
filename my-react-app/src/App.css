@@ -26,3 +26,34 @@ section {
   position: relative;
   z-index: 1;
 }
+
+/* Estilos para la imagen de fondo */
+.back-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .back-image img {
+    height: auto;
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-image img {
+    min-height: 150px;
+  }
+}
