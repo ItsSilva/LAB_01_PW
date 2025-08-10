@@ -93,8 +93,7 @@
 }
 
 .thumbnail {
-  width: 120px;
-  height: 80px;
+  height: 128px;
   border-radius: 8px;
   object-fit: cover;
   cursor: pointer;
