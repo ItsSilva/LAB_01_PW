@@ -1,6 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
+import LatestUpdates from './components/LatestUpdates/LatestUpdates';
 import { useState } from 'react'
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
       <main>
         <section className='Header'>
           <Header />
+        </section>
+        <section>
+          <LatestUpdates />
         </section>
       </main>
     </>
