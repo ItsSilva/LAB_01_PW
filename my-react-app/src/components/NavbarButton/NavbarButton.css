@@ -1,6 +1,38 @@
 .custom-navbar-button {
     font-size: 18px;
+    font-weight: 400;
     flex: 0 0 auto;
     white-space: nowrap;
-    padding: 6px 0;
+    padding: 0 0.7rem;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-navbar-button:hover {
+    color: #7bb1ff;
+}
+
+.custom-navbar-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background: linear-gradient(90deg, #7bb1ff, #00d4ff);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.custom-navbar-button:hover::after,
+.custom-navbar-button.active::after {
+    width: 100%;
+}
+
+.custom-navbar-button.active {
+    color: #7bb1ff;
 }
