@@ -1,6 +1,6 @@
 .more-section {
   position: relative;
-  min-height: 50vh;
+  min-height: 400px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -52,8 +52,8 @@
 
 @media (max-width: 768px) {
   .more-section {
-    padding: 3rem 1rem;
-    min-height: 50vh;
+    padding: 2rem 1rem;
+    min-height: 300px;
   }
   
   .more-container {
