@@ -36,6 +36,7 @@ function App() {
           <More />
         </section>
       </main>
+      <Footer />
     </>
   )
 }
