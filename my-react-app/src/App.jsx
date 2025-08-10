@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import LatestUpdates from './components/LatestUpdates/LatestUpdates';
 import OurProducts from './components/OurProducts/OurProducts';
+import More from './components/More/More';
 import { useState } from 'react'
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
         </section>
         <section className='our-products'>
           <OurProducts />
+        </section>
+        <section className='more-info'>
+          <More />
         </section>
       </main>
     </>
