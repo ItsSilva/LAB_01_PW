@@ -3,13 +3,12 @@ import './LatestUpdatesCard.css';
 const LatestUpdatesCard = ({ update }) => {
     const getBadgeType = (game) => {
         if (game === 'HoYoverse') return 'company';
-        if (game === '') return 'product';
         return 'product';
     };
 
     const getBadgeText = (game) => {
-        if (game === 'HoYoverse') return 'Company';
-        return 'Product';
+        if (game === 'HoYoverse') return 'COMPANY';
+        return 'PRODUCT';
     };
 
     const isLargeCard = update.id === 3;
@@ -21,6 +20,8 @@ const LatestUpdatesCard = ({ update }) => {
                 alt={update.game || 'Game update'} 
                 className="card-image"
             />
+            
+            <div className="card-overlay"></div>
             
             <div className={`card-badge ${getBadgeType(update.game)}`}>
                 {getBadgeText(update.game)}
