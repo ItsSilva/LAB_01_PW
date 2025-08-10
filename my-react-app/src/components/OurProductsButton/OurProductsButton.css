@@ -1,11 +1,12 @@
 .custom-button-products {
-    color: #7bb1ff;
+color: #7bb1ff;
     border: none;
-    padding: 8px 42px;
+    padding: 8px 34px;
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     text-decoration: none;
+    border-radius: 18px;
 }
