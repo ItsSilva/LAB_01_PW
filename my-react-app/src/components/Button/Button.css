@@ -1,13 +1,12 @@
 .custom-button-more {
-	background-color: #007bff;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	font-size: 16px;
-	cursor: pointer;
-	border-radius: 5px;
-}
-
-.custom-button:hover {
-	background-color: #0056b3;
+    color: #7bb1ff;
+    border: none;
+    padding: 4px 18px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    border-radius: 18px;
 }
