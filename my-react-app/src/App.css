@@ -1,30 +1,12 @@
 .custom-navbar {
-z-index: 2;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 0.7rem;
-    height: 58px;
-    background: rgba(0, 0, 0, .7);
-}
-
-.navbar-logo img {
-  height: 40px;
-}
-
-.navbar-links {
+  z-index: 2;
+  position: relative;
+  height: 58px;
+  width: 100%;
   display: flex;
-  gap: 16px;
-}
-
-.custom-navbar-button {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  transition: background 0.3s, border 0.3s;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: rgba(0, 0, 0, .7);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
 }

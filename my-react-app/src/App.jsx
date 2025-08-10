@@ -1,23 +1,24 @@
 import './App.css'
-import NavbarButton from './components/NavbarButton/NavbarButton.jsx'
+import Navbar from './components/Navbar/Navbar';
+import Header from './components/Header/Header';
+import { useState } from 'react'
+
 function App() {
+  const [activeTab, setActiveTab] = useState('Home');
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+    console.log(`${tabName} clicked`);
+  };
 
   return (
     <>
       <nav className='custom-navbar'>
-        <div className='navbar-logo'>
-          <a href="#">
-            <img src="../src/assets/logo.png" alt="Logo" />
-          </a>
-        </div>
-        <div className='navbar-links'>
-          <NavbarButton label="Home" onClick={() => console.log('Home clicked')} />
-          <NavbarButton label="News" onClick={() => console.log('News clicked')} />
-          <NavbarButton label="About Us" onClick={() => console.log('About Us clicked')} />
-          <NavbarButton label="Careers" onClick={() => console.log('Careers clicked')} />
-          <NavbarButton label="Help Center" onClick={() => console.log('Help Center clicked')} />
-        </div>
+        <Navbar activeTab={activeTab} onTabClick={handleTabClick} />
       </nav>
+      <section className='Header'>
+        <Header/>
+      </section>
     </>
   )
 }
