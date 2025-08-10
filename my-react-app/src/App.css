@@ -15,5 +15,14 @@
 }
 
 .Header {
-  margin-top: 58px; /* Compensa la altura del navbar fijo */
+  margin-top: 58px; 
+}
+
+main {
+  position: relative;
+}
+
+section {
+  position: relative;
+  z-index: 1;
 }
