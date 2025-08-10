@@ -1,34 +1,38 @@
 import './Header.css';
 import ButtonHeader from '../ButtonHeader/ButtonHeader';
 
+import HeaderData from '../../data/HeaderData';
+
 const Header = () => {
   return (
     <header className='custom-header'>
-      <img 
-        src="../../../src/assets/header.jpg" 
-        alt="Honkai: Star Rail Background" 
+      {HeaderData.map(data => (
+        <div key={data.id} className="header-item">
+         <img 
+        src={data.image} 
+        alt={data.title} 
         className="header-background"
       />
       
       <div className="header-content">
         <div className="game-info">
           <img 
-            src='../../../src/assets/appicon.png' 
-            alt='Honkai: Star Rail Logo' 
+            src={data.icon} 
+            alt={data.title} 
             className='game-logo' 
           />
-          <h1 className="game-title">Honkai: Star Rail</h1>
+          <h1 className="game-title">{data.title}</h1>
         </div>
 
         <h1 className="main-title">
-          Honkai: Star Rail V3.4<br />
-          "For the Sun is Set to<br />
-          Die" Is Now Online!
+          {data.description}
         </h1>
         <div className="cta-section">
           <ButtonHeader />
         </div>
       </div>
+        </div>
+      ))}
 
       <div className="bottom-thumbnails">
         <img 
