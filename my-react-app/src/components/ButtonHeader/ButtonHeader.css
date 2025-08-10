@@ -1,0 +1,9 @@
+.custom-button {
+--border-color: #4D6EFF;
+    --bg-color: rgba(0, 0, 0, 0.5);
+    --rx-pc: 37;
+    --rx-mo: 18;
+    min-width: 2.6rem;
+        font-size: 0.24rem;
+        padding: 0 0.12rem;
+}
