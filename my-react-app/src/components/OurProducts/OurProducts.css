@@ -1,0 +1,52 @@
+.our-products {
+  padding: 4rem 0;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.our-products-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+}
+
+.our-products-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+
+.our-products-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .our-products-list {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-products {
+    padding: 2rem 1rem;
+  }
+  
+  .our-products-header h2 {
+    font-size: 2rem;
+  }
+  
+  .our-products-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
